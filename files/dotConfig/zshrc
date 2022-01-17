@@ -1,0 +1,16 @@
+#this file was deployed by ansible
+
+#alias
+#ls
+alias ls='ls --color=auto'
+
+#colin custom alias
+alias cl='clear'
+
+#plugin alias
+alias cat="pygmentize -g"
+
+# Plugin activation
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+

@@ -1,0 +1,26 @@
+
+#servers to be managed can be placed here by IP Address or working DNS name
+
+[testing]
+#Bernard_oldAir
+ansibleTesting1
+ansibleTesting2
+rPiDesktop
+
+[servers]
+ansibleTesting2
+
+[desktops]
+rPiDesktop
+rPi48b
+ansibleTesting1
+
+#  --------- Operating Systems -----------
+
+[MacOSX]
+Bernard_oldAir
+
+[linux]
+ansibleTesting1
+ansibleTesting2
+rPiDesktop

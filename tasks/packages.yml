@@ -1,0 +1,11 @@
+--- 
+-
+  become: true
+  name: "Linux Packages (servers)"
+  apt: ### change to packages (universal)
+    name:
+      - htop
+      - tmux
+      - lynis
+      - vim ### just added make config
+  when: "ansible_distribution in[\"Ubuntu\", \"Debian\", \"Pop!_OS\"]"

@@ -1,0 +1,14 @@
+---
+  - name: copy .dotTESTING
+    copy:
+      src: files/dotConfig/TESTINGdotfile.yml
+      dest: ~/TESTINGdotfile.yml
+      owner: colin
+      group: colin
+    copy:
+      src: files/dotConfig/vimrc
+      dest: ~/.vimrc
+      owner: colin
+      group: colin
+
+
