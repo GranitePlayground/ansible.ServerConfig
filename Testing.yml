@@ -1,0 +1,6 @@
+- hosts: all
+  pre_tasks:
+  - include_tasks: tasks/updateALL.yml
+  tasks:
+  - include_tasks: tasks/openssh.yml
+  
