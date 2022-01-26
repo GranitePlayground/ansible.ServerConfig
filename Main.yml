@@ -9,4 +9,4 @@
 - hosts: testing
   become: true
   tasks:
-  - include_tasks:  task/NTP_timeConfig.yml
+ # - include_tasks:  task/NTP_timeConfig.yml
