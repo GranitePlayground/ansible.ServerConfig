@@ -12,13 +12,15 @@ ansibleTesting2
 
 [desktops]
 rPiDesktop
-rPi48b
 ansibleTesting1
+
+[production]
+#HAL-uPi48b
 
 #  --------- Operating Systems -----------
 
 [MacOSX]
-Bernard_oldAir
+#Bernard_oldAir
 
 [linux]
 ansibleTesting1
