@@ -27,3 +27,5 @@ fi
 alias cl='clear'
 # exit
 alias ex='exit'
+# SSH Agent
+alias ssha='eval $(ssh-agent) && ssh-add'
