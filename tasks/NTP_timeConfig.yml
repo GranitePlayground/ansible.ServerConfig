@@ -1,33 +1,21 @@
----
-- name: NTP_timeConfig
+- hosts: testing
   become: true
-  
-  vars:
-    ntp_server1: 192.168.42.1
-    ntp_server2: time.apple.com
-    ntp_server3: 0north-amarica.pool.ntp.org
-    ntp_server4: 1north-amarica.pool.ntp.org
-
-  tasks:
-    - name: check/install ntp client package
-      package: 
-        name=ntp
-        state=present
-
-    - name: deploy ntp.conf to hosts
-      template:
-        src=templates/ntp.j2
-        dest=/etc/ntp.conf
-        owner=root
-        group=root
-        mode=0644
-        backup=yes
-      notify: start_restart_ntp_client
-
   handlers:
-
-    - name: ensure ntpd is present and running
-      service:
-        name=ntpd
-        state=restarted
-        enabled=yes
+  - name: Restart systemd-timedated
+    service:
+      name: systemd-timedated
+      state: restarted
+  tasks:
+  - name: Set timezone
+    shell: timedatectl set-timezone EST
+    notify: Restart systemd-timedated
+  - name: copy ntp.conf
+    copy:
+      src: files/dotConfig/ntp.conf
+      dest: /etc/ntp.conf
+  - name: Enable NTP
+    shell: timedatectl set-ntp true
+    notify: Restart systemd-timedated
+  - name: Get status
+    shell: timedatectl status
+    register: timedatectl_status

@@ -1,0 +1,27 @@
+---
+- name: NTP_timeConfig
+  become: true
+ 
+  tasks:
+    - name: check/install ntp client package
+      package: 
+        name=ntp
+        state=present
+
+    - name: deploy ntp.conf to hosts
+      template:
+        src=templates/ntp.j2
+        dest=/etc/ntp.conf
+        owner=root
+        group=root
+        mode=0644
+        backup=yes
+      notify: start_restart_ntp_client
+
+  handlers:
+
+    - name: ensure ntpd is present and running
+      service:
+        name=ntpd
+        state=restarted
+        enabled=yes

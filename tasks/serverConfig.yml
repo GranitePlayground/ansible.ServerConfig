@@ -1,29 +1,39 @@
 ---
-  - name: serverConfig Files
-    become: true
-#    copy:
-#      src: files/dotConfig/htoprc
-#      dest: .config/htop/htoprc
-#      force: yes
-#    copy:
-#      src: files/dotConfig/vimrc
-#      dest: .vimrc
-    copy:
-      user: colin
-      src: files/dotConfig/tmux.conf
-      dest: ~/.tmux.conf
-#    copy:
-#      src: files/dotConfig/bash_aliases
-#      dest: /home/colin/.bash_aliases
-#      force: yes
+-
+  name: copy dotConfigfiles
+  copy: 
+    dest: /home/colin/.config/htop/htoprc
+    src: files/dotConfig/htoprc
+    owner: colin
+    group: colin
+  name: "file 'htoprc'"
+- 
+  copy: 
+    dest: /home/colin/.vimrc
+    src: files/dotConfig/vimrc
+    owner: colin
+    group: colin
+  name: "file '.vimrc'"
+-
+  copy:
+    dest: /home/colin/.tmux.conf
+    src: files/dotConfig/tmux.conf
+    owner: colin
+    group: colin
+  name: "file '.tmux.conf'"
+-
+  copy:
+    dest: /home/colin/.bash_aliases
+    src: files/dotConfig/bash_aliases
+    owner: colin
+    group: colin
+  name: "file '.bash_aliases'"
+
 #    when: "ansible_distribution in[\"Ubuntu\", \"Debian\", \"Pop!_OS\"]"
 
 
 ### - Notes - ###
 
-### this task does not work only copys the last file in the set
 ### rename this file something about dot config or dot files
 
-### copy issues
-# open way to point then at colin home folder
-# figure out how to compy multiple files not just the last one
+### find a more flexible way to point then at colin home folder

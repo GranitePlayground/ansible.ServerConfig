@@ -15,7 +15,7 @@ rPiDesktop
 ansibleTesting1
 
 [production]
-HAL-uPi48b
+#HAL-uPi48b
 
 #  --------- Operating Systems -----------
 

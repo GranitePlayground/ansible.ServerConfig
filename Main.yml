@@ -5,8 +5,8 @@
   tasks:
   - include_tasks: tasks/packages.yml
   - include_tasks: tasks/serverConfig.yml
-
-- hosts: testing
-  become: true
-  tasks:
+#
+#- hosts: testing
+#  become: true
+#  tasks:
  # - include_tasks:  task/NTP_timeConfig.yml
