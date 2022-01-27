@@ -1,6 +1,27 @@
-- hosts: all
-  pre_tasks:
-  - include_tasks: tasks/updateALL.yml
+- hosts: testing
+  become: true
+#  pre_tasks:
+#  - include_tasks: tasks/updateALL.yml  
+  handlers:
+  - name: Restart systemd-timedated
+    service:
+      name: systemd-timedated
+      state: restarted
   tasks:
-  - include_tasks: tasks/openssh.yml
+  - name: Set timezone
+    shell: timedatectl set-timezone EST
+    notify: Restart systemd-timedated
+  - name: copy ntp.conf
+    copy:
+      src: files/dotConfig/ntp.conf
+      dest: /etc/ntp.conf
+  - name: Enable NTP
+    shell: timedatectl set-ntp true
+    notify: Restart systemd-timedated
+  - name: Get status
+    shell: timedatectl status
+    register: timedatectl_status
+
+#  tasks:
+#  - include_tasks: tasks/openSSH.yml
   

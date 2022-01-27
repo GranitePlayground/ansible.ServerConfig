@@ -1,22 +1,15 @@
- # become: true
- # name: openSSH running
- # Service:
- #   name: openSSH
- #   state: running
- # when: "ansible_distribution in[\"Ubuntu\", \"Debian\", \"Pop!_OS\"]"
-  ---
-- name: openSSH running
+--- 
+-
   become: true
+  name: "openSSH running"
+    package: 
+      name=openssh
+      state=present
+#  when: "ansible_distribution in[\"Ubuntu\", \"Debian\", \"Pop!_OS\"]"
 
-  tasks:
-    - name: check/install ntp client package
-      package: 
-        name=openssh
-        state=present
-
-  handlers:
-    - name: ensure ntpd is present and running
-      service:
-        name=ssh
-        state=restarted
-        enabled=yes
+#  handlers:
+#    - name: ensure ntpd is present and running
+#      service:
+#        name=ssh
+#        state=restarted
+#        enabled=yes

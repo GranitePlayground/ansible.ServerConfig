@@ -5,6 +5,7 @@
   apt: ### change to packages (universal)
     name:
       - htop
+      - ntp
       - tmux
       - lynis
       - vim ### just added make config
