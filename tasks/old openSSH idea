@@ -1,0 +1,6 @@
+ # become: true
+ # name: openSSH running
+ # Service:
+ #   name: openSSH
+ #   state: running
+ # when: "ansible_distribution in[\"Ubuntu\", \"Debian\", \"Pop!_OS\"]"
