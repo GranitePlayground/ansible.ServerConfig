@@ -4,7 +4,7 @@
   pre_tasks:
   - include_tasks: tasks/updateALL.yml
   tasks:
-#  - include_tasks: tasks/packages.yml
+  - include_tasks: tasks/packages.yml
   - include_tasks: tasks/serverConfig.yml
 
 #  handlers:
