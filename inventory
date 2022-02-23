@@ -6,6 +6,7 @@
 ansibleTesting1
 ansibleTesting2
 rPiDesktop
+192.168.42.160
 
 [servers]
 ansibleTesting2
