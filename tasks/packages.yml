@@ -1,12 +1,11 @@
 --- 
 -
-  become: true
-  name: "Linux Packages (servers)"
-  package: ### change to packages (universal)
+  name: "Install Debian Packages"
+  package:
     name:
       - htop
       - ntp
       - tmux
       - lynis
       - vim ### just added make config
- # when: "ansible_distribution in[\"Ubuntu\", \"Debian\", \"Pop!_OS\"]"
+  when: "ansible_distribution in[\"Ubuntu\", \"Debian\", \"Pop!_OS\"]"
