@@ -15,10 +15,10 @@
   tags: always
   when: "ansible_distribution in[\"Ubuntu\", \"Debian\", \"Pop!_OS\"]"
 - 
-  become: false
-  community.general.homebrew: 
-    update_homebrew: true
-    upgrade_all: true
-  name: "update (MacOSX)"
-  tags: always
-  when: "ansible_distribution == \"MacOSX\""
+#  become: false
+#  community.general.homebrew: 
+#    update_homebrew: true
+#    upgrade_all: true
+#  name: "update (MacOSX)"
+#  tags: always
+#  when: "ansible_distribution == \"MacOSX\""

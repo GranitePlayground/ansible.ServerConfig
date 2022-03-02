@@ -1,6 +1,34 @@
 #servers to be managed can be placed here by IP Address or working DNS name
 [testing]
+<<<<<<< HEAD
 uSv-Testing
 uDt-Testing
 centDt-Testing
 #colin@192.168.42.92
+=======
+#Bernard_oldAir
+ansibleTesting1
+ansibleTesting2
+rPiDesktop
+192.168.42.160
+
+[servers]
+ansibleTesting2
+
+[desktops]
+rPiDesktop
+ansibleTesting1
+
+[production]
+#HAL-uPi48b
+
+#  --------- Operating Systems -----------
+
+[MacOSX]
+#Bernard_oldAir
+
+[linux]
+ansibleTesting1
+ansibleTesting2
+rPiDesktop
+>>>>>>> a821d49b7157dc621454b339340623be6033fcac

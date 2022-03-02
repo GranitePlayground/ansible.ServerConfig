@@ -23,6 +23,8 @@ fi
 #alias l='ls -CF'
 #alias lla='ls -al'
 
+alias ..='cd ..'
+
 # clear
 alias cl='clear'
 # exit
