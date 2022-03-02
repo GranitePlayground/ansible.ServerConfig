@@ -1,7 +1,0 @@
-- hosts: testing
-  become: true
-
-
-#  tasks:
-#  - include_tasks: tasks/openSSH.yml
-  

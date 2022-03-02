@@ -24,6 +24,8 @@ fi
 #alias l='ls -CF'
 #alias lla='ls -al'
 
+# more up one level
+alias ..='cd ..'
 # clear
 alias cl='clear'
 # exit

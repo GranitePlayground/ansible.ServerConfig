@@ -1,7 +1,6 @@
 --- 
 - 
-  become: true
-  dnf: 
+  yum: 
     update_cache: true
     update_only: true
   name: "update (CentOS)"
