@@ -1,0 +1,8 @@
+---
+-
+  name: Add HAL ssh key
+  become: true
+  tags: always
+  authorized_key:
+    user: HAL_ansible
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPjV/H4jL8lJ0vORIVHklwCzbldiRpb5F67vAqU0HTfn HAL ansible controller Key"
