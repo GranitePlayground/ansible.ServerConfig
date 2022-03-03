@@ -36,6 +36,15 @@
     user:
       name: HAL_ansible
       group: sudo
+    when: "ansible_distribution in[\"Ubuntu\", \"Debian\", \"Pop!_OS\"]"
+  -
+    name: CentOS 'Wheel' user
+    become: true
+    tags: always
+    user:
+      name: HAL_ansible
+      group: wheel
+    when: ansible_distribution == "CentOS"
   -
     name: Add HAL ssh key
     become: true

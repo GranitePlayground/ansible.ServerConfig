@@ -5,7 +5,7 @@
   tasks:
 #  - include_tasks: tasks/packages.yml
 #  - include_tasks: tasks/serverConfig.yml
-  - include_tasks: tasks/HAL_ansibleUser.yml
+  - include_tasks: tasks/HAL_keyUpkeep.yml
 #
 #- hosts: testing
 #  become: true
