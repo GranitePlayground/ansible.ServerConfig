@@ -1,0 +1,33 @@
+
+Bernard_oldAir
+
+
+#########################################
+
+#- hosts: all
+#  become: true
+#  tasks:
+#  -
+#    name: Create Ansible user HAL
+#    become: true
+#    tags: always
+#    user:
+#      name: HAL_ansible
+#      group: sudo
+#  -
+#    name: Add HAL ssh key
+#    become: true
+#    tags: always
+#    authorized_key:
+#      user: HAL_ansible
+#      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPjV/H4jL8lJ0vORIVHklwCzbldiRpb5F67vAqU0HTfn HAL ansible controller Key"
+#  -
+#    name: Add HAL Sudoers File
+#    become: true
+#    tags: always
+#    copy:
+#      src: files/sudoers_HAL
+#      dest: /etc/sudoers.d/HAL_ansible
+#      owner: root
+#      group: root
+#      mode: 0440
