@@ -1,40 +1,40 @@
 ---
 -
+  name: "file 'htoprc'"
   copy: 
     dest: /home/colin/.config/htop/htoprc
     src: files/dotConfig/htoprc
     owner: colin
     group: colin
-  name: "file 'htoprc'"
-  when: "ansible_distribution in[\"Ubuntu\", \"Debian\", \"Pop!_OS\"]"
+#  when: "ansible_distribution in[\"Ubuntu\", \"Debian\", \"Pop!_OS\"]"
 - 
-  copy: 
+  name: "file '.vimrc'"
+  copy:
     dest: /home/colin/.vimrc
     src: files/dotConfig/vimrc
     owner: colin
     group: colin
-  name: "file '.vimrc'"
 -
+  name: "file '.tmux.conf'"
   copy:
     dest: /home/colin/.tmux.conf
     src: files/dotConfig/tmux.conf
     owner: colin
     group: colin
-  name: "file '.tmux.conf'"
 -
+  name: "file '.bashrc'"
   copy:
     dest: /home/colin/.bashrc
     src: files/dotConfig/bashrc
     owner: colin
     group: colin
-  name: "file '.bashrc'"
 -
+  name: "file '.bash_aliases'"
   copy:
     dest: /home/colin/.bash_aliases
     src: files/dotConfig/bash_aliases
     owner: colin
     group: colin
-  name: "file '.bash_aliases'"
 
 #    when: "ansible_distribution in[\"Ubuntu\", \"Debian\", \"Pop!_OS\"]"
 

@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  become: true
   pre_tasks:
   - include_tasks: tasks/updateALL.yml
   tasks:

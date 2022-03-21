@@ -1,11 +1,13 @@
 --- 
 -
   name: "Install Debian Packages"
+  become: true
   package:
     name:
       - htop
       - ntp
       - tmux
       - lynis
-      - vim ### just added make config
+      ### just added make config
+      - vim
   when: "ansible_distribution in[\"Ubuntu\", \"Debian\", \"Pop!_OS\"]"

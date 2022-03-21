@@ -1,10 +1,12 @@
 #servers to be managed can be placed here by IP Address or working DNS name
 
-[testing]
-uSv-Testing
-uDt-Testing
-centDt-Testing
+pi48b
 
-[deb]
-uSv-Testing
-uDt-Testing
+#[testing]
+#uSv-Testing
+#uDt-Testing
+#centDt-Testing
+#
+#[deb]
+#uSv-Testing
+#uDt-Testing
