@@ -1,6 +1,8 @@
 #servers to be managed can be placed here by IP Address or working DNS name
 
-pi48b
+netPi
+
+#pi48b
 
 #[testing]
 #uSv-Testing
