@@ -1,6 +1,7 @@
 #servers to be managed can be placed here by IP Address or working DNS name
 
-netPi
+deskPlay
+#netPi
 
 #pi48b
 
